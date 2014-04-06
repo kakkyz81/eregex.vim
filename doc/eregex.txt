@@ -49,7 +49,7 @@ E2v({extendedregex} [, {iISCDMm}])
     :let vimregex = E2v('(?<=abc),\d+,(?=xzy)','i')
     :echo vimregex
 <
-    Detail of option value can be found at |eregex-options| 
+    Detail of option value can be found at |eregex-options|
     or |eregex-multiline|
 
 E2v("","V")
@@ -174,11 +174,11 @@ nnoremap ,? /
     "/" will use :M/ to search. ",/" will use the original "/".
 
     --------------------
-    Add the following line to ~/.vimrc 
+    Add the following line to ~/.vimrc
     let eregex_replacement=3
     will make :S have the following rules.
 
-:S/pattern/\r,\n,\&,&,\~,~/ 
+:S/pattern/\r,\n,\&,&,\~,~/
 :s/pattern/\n,\r,&,\&,~,\~/
 
    +--------------------+-----------------------------+
@@ -255,7 +255,7 @@ Unusable Vim regexp notation
 
     \x	hex digit:			[0-9A-Fa-f]
                 \\x[0-9A-Fa-f]{1,2} will change to character.
-                \x82\xa0  => '§¢' ( shift-jis, cp932 )
+                \x82\xa0  => '„ÅÇ' ( shift-jis, cp932 )
                 But 0x00 and 0x0a and 0x08 will not change.
 
 Usable Vim regexp notations
@@ -331,7 +331,7 @@ Usable Vim regexp notations
 
     Note:
         In Vim style regexp, /[^az]/ will not match break line.
-        But it is incorrect to to write /[^az\n]/ to point this out. 
+        But it is incorrect to to write /[^az\n]/ to point this out.
         /[^az\n]/ will match breakline.
         So we might use /[^ \t\r^L]/ instead of /[^ \t\r\n^L]/ .
         Just remember not write \n in [^...] .
@@ -389,11 +389,11 @@ Usable Vim regexp notations
 
     Use \zs and \ze to control matchdata and submatch.
 
-(4) \_x 
+(4) \_x
 
-    \u is [A-Z] 
-    \_u is [A-Z\n] 
-    \_[A-Z] is [A-Z\n] 
+    \u is [A-Z]
+    \_u is [A-Z\n]
+    \_[A-Z] is [A-Z\n]
 
     Not uppercase characters and line break.
     \_U  == \_[^A-Z]
@@ -401,7 +401,7 @@ Usable Vim regexp notations
     \_. is any character including line break.
 
 
-(5) Difference between ^ and \_^ or $ and \_$ 
+(5) Difference between ^ and \_^ or $ and \_$
 
     Take $ for example
 
